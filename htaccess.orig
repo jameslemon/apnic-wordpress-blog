@@ -1,0 +1,45 @@
+# BEGIN iThemes Security
+	# BEGIN Tweaks
+		# Rules to disable directory browsing
+		Options -Indexes
+		
+	# END Tweaks
+# END iThemes Security
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+<files wp-login.php>
+Order deny,allow
+Deny from all
+# Whitelist APNIC Secretariat IPs for login
+Allow from 2001:0DD8:0012::/48
+Allow from 2001:0DD8:0008::/45
+Allow from 2001:0DD8:0006::/48
+Allow from 2001:0DF8::/32
+Allow from 2001:0DF9::/32
+Allow from 2001:0DC0::/32
+Allow from 220.247.144.0/20
+Allow from 203.119.96.0/20
+Allow from 203.119.95.0/24
+Allow from 203.119.92.0/23
+Allow from 203.119.86.0/24
+Allow from 180.149.224.0/20
+Allow from 203.119.77.0/24
+Allow from 203.119.76.0/24
+Allow from 203.119.42.0/23
+Allow from 203.119.0.0/24
+Allow from 202.12.31.0/24
+Allow from 202.12.28.0/23
+</files>
+<IfModule mod_headers.c>
+# Caching JS/CSS/etc files for 3 hours
+<FilesMatch "\.(css|js|png|jpg|jpeg)$">
+Header set Cache-Control "max-age=10800, public"
+</FilesMatch>
+</IfModule>

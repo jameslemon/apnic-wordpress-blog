@@ -1,0 +1,38 @@
+.ie8 .placeholder{
+  color: #aaa;
+}
+
+/*
+.ie6 .container,
+.ie7 .container,
+.ie8 .container{
+    width:1170px;
+}
+.ie6 #header,
+.ie7 #header,
+.ie8 #header{
+    height: 127px;
+    overflow: hidden;
+}
+.ie8 .col-md-9{
+    width: 75%;
+}
+.ie8 .col-md-6{
+    width: 50%;
+}
+.ie8 .col-md-3{
+    width: 25%;
+}
+.ie8 .col-md-2{
+    width: 16.66666666667%;
+}
+.ie8 .col-md-9,
+.ie8 .col-md-6,
+.ie8 .col-md-3,
+.ie8 .col-md-2{
+    float: left;
+}
+.ie8 .row{
+    overflow: hidden;
+}
+*/
