@@ -771,3 +771,6 @@ figure figcaption.picture:before{
     margin-top: 5px;
     margin-top: 0.5rem;
 }
+blockquote{
+    font-size: 12px;
+}
